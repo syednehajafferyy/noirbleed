@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoirBleed - About Us</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/libertinus-serif" />
+  <style>
+    /* Reset and body */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #f5f5f5;
+      font-family: 'Libertinus Serif', serif;
+      line-height: 1.6;
+      transition: margin-right 0.3s ease;
+      padding: 0;
+    }
+
+    /* Navbar fixed on top full width */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background-color: #0f0f0f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      z-index: 2000;
+    }
+    .navbar .brand img {
+      height: 60px;
+      width: auto;
+    }
+    .navbar .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .navbar .links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+    .hamburger {
+      width: 30px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 2100;
+    }
+    .hamburger span {
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    /* Sidebar on right, hidden initially */
+    .sidebar {
+      position: fixed;
+      top: 80px; /* below navbar */
+      right: -220px;
+      width: 220px;
+      height: calc(100% - 80px);
+      background-color: #111;
+      padding-top: 1rem;
+      transition: right 0.3s ease;
+      z-index: 1500;
+    }
+    .sidebar.open {
+      right: 0;
+    }
+    .sidebar a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .sidebar a:hover {
+      background-color: #333;
+    }
+
+    /* Push body content left when sidebar open */
+    body.sidebar-open {
+      margin-right: 220px;
+    }
+
+    /* Main content centered below navbar */
+    main {
+      max-width: 900px;
+      margin: 100px auto 3rem auto; /* margin top = navbar height + some spacing */
+      padding: 0 1rem;
+    }
+
+    /* About page content styles */
+    h1, h2 {
+      text-align: center;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+      color: #ff0044;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #ff0044;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: #ff3366;
+      border-bottom: 2px solid #ff3366;
+      padding-bottom: 0.3rem;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .designer {
+      background: #111;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px #ff0044aa;
+      transition: transform 0.3s ease;
+    }
+    .designer:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ff0066cc;
+    }
+    .designer h3 {
+      color: #ff6699;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .designer p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .fun-fact {
+      font-style: italic;
+      color: #ff77aa;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+    a.back-link {
+      display: inline-block;
+      margin-top: 3rem;
+      color: #ff0044;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: 2px solid #ff0044;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    a.back-link:hover {
+      background-color: #ff0044;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="brand">
+      <img src="./noirlog.png" alt="NoirBleed Logo" />
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="checkout.html">Cart</a>
+    </div>
+    <div class="hamburger" aria-label="Toggle sidebar" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="about.html">About Us</a>
+    <a href="hoodies.html">Hoodies</a>
+    <a href="tshirts.html">Tshirts</a>
+    <a href="crop-hoodies.html">Crop Hoodies</a>
+  </div>
+
+  <!-- Main content -->
+  <main>
+    <h1>About NoirBleed</h1>
+
+    <p>
+      Welcome to NoirBleed — where the raw edge of streetwear meets high-end artistry. We believe that clothing isn’t just fabric; it’s a statement, a mood, a lifestyle. Rooted in urban culture and inspired by the stark contrasts of noir visuals, our brand embodies the spirit of rebellion with a luxe twist.
+    </p>
+
+    <p>
+      Each piece in our collection tells a story of creativity, passion, and bold individuality. We craft apparel for those who dare to stand out and wear their vibe loud and proud.
+    </p>
+
+    <h2>Meet Our Designers</h2>
+
+    <div class="designer">
+      <h3>Alice "Ink" Morgan</h3>
+      <p>
+        Alice is the creative powerhouse behind NoirBleed’s signature prints. With over 10 years of experience in graphic design and street art, her bold strokes and monochrome aesthetics bring the brand's dark, edgy soul to life.
+      </p>
+      <p>
+        When she’s not sketching in her studio, Alice is out capturing cityscapes and urban vibes that fuel her creative fire.
+      </p>
+    </div>
+
+    <div class="designer">
+      <h3>Jamal "Shadow" Lee</h3>
+      <p>
+        Jamal’s expertise lies in textile innovation and apparel design. With a decade of work in fashion houses across New York and Tokyo, he fuses comfort with cutting-edge style to create hoodies and tees that feel as good as they look.
+      </p>
+      <p>
+        Known for his meticulous attention to detail, Jamal ensures every stitch tells a story of quality and durability.
+      </p>
+    </div>
+
+    <div class="designer">
+      <h3>Marina "Vibe" Rodriguez</h3>
+      <p>
+        Marina brings the soul to NoirBleed’s collections with her deep understanding of culture and trends. Having worked as a stylist and cultural consultant, she keeps the brand fresh, relevant, and unapologetically bold.
+      </p>
+      <p>
+        Her mantra? Fashion is art, and art should be lived, not just worn.
+      </p>
+    </div>
+
+    <p class="fun-fact">
+      Fun Fact: Our team’s favorite city for inspiration? The never-sleeping streets of Tokyo — where neon lights and shadows dance all night long.
+    </p>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </main>
+
+  <script>
+    // Sidebar toggle
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      body.classList.toggle('sidebar-open');
+    });
+
+    // Close sidebar if clicking outside
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+        sidebar.classList.remove('open');
+        body.classList.remove('sidebar-open');
+      }
+    });
+  </script>
+</body>
+</html>

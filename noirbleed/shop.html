@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/libertinus-serif">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoirBleed | Shop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Libertinus Serif', serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      transition: margin-right 0.3s ease; /* smooth push effect */
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0f0f0f;
+      position: relative;
+    }
+
+    .navbar .brand img {
+      height: 80px;
+      width: auto;
+    }
+
+    .navbar .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .navbar .links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      width: 30px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 100%;
+      background-color: #111;
+      padding-top: 60px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: #333;
+    }
+
+    /* Push body when sidebar opens */
+    body.sidebar-open {
+      margin-right: 200px; /* push content to the right */
+    }
+
+    /* Shop Section */
+    .shop-header {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #111;
+    }
+
+    .shop-header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .shop-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .shop-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .shop-card h3 {
+      margin: 15px 0 5px;
+      font-size: 1.2rem;
+      color: black;
+    }
+
+    .shop-card p {
+      font-size: 1rem;
+      color: black;
+    }
+
+    .shop-card .btn {
+      background-color: black;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .shop-card .btn:hover {
+      background-color: #444;
+    }
+
+    /* Footer */
+    footer {
+      background-color:#0f0f0f;
+      padding:30px 20px;
+      text-align:center;
+      color:white;
+      margin-top:50px;
+    }
+
+    footer img {
+      height:25px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="brand">
+    <img src="./noirlog.png" alt="NoirBleed Logo">
+  </div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="checkout.html">Cart</a>
+  </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="sidebar">
+    <a href="about.html">About Us</a>
+    <a href="hoodies.html">Hoodies</a>
+    <a href="tshirts.html">Tshirts</a>
+    <a href="crop-hoodies.html">Crop Hoodies</a>
+  </div>
+</div>
+
+<!-- Shop Header -->
+<div class="shop-header">
+  <h1>Shop NoirBleed</h1>
+  <p>Discover our exclusive streetwear collection</p>
+</div>
+
+<!-- Shop Grid -->
+<div class="shop-grid">
+  <div class="shop-card">
+    <img src="./blackgraphictee.jpg" alt="Black Graphic Tee">
+    <h3>Black Graphic Tee</h3>
+    <p>$29.99</p>
+    <a href="product.html?id=1" class="btn">View</a>
+  </div>
+
+  <div class="shop-card">
+    <img src="./whihoodie.jpg" alt="White Hoodie">
+    <h3>White Dust Hoodie</h3>
+    <p>$49.99</p>
+    <a href="product.html?id=2" class="btn">View</a>
+  </div>
+
+  <div class="shop-card">
+    <img src="./crophod.jpg" alt="Crop Hoodie">
+    <h3>Crop Hoodie</h3>
+    <p>$39.99</p>
+    <a href="product.html?id=3" class="btn">View</a>
+  </div>
+
+  <div class="shop-card">
+    <img src="./oversized.jpg" alt="Oversized Hoodie">
+    <h3>Oversized Hoodie</h3>
+    <p>$54.99</p>
+    <a href="product.html?id=4" class="btn">View</a>
+  </div>
+
+  <div class="shop-card">
+    <img src="./streetwear.jpg" alt="Streetwear Tee">
+    <h3>Streetwear Tee</h3>
+    <p>$34.99</p>
+    <a href="product.html?id=5" class="btn">View</a>
+  </div>
+
+  <div class="shop-card">
+    <img src="./limitesed.jpg" alt="Limited Edition Hoodie">
+    <h3>Limited Edition Hoodie</h3>
+    <p>$59.99</p>
+    <a href="product.html?id=6" class="btn">View</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div style="margin-bottom:20px;">
+    <a href="https://instagram.com" target="_blank"><img src="./instagram.png" alt="Instagram"></a>
+    <a href="https://twitter.com" target="_blank"><img src="./twitter.png" alt="Twitter"></a>
+    <a href="https://facebook.com" target="_blank"><img src="./facebook.png" alt="Facebook"></a>
+  </div>
+
+ <div style="text-align:center; margin-top:20px;">
+  <p style="margin-bottom:10px;">Secure Checkout with</p>
+  <img src="./visa.png" alt="Visa" style="height:30px; margin:0 8px;">
+  <img src="./mastercard.png" alt="MasterCard" style="height:30px; margin:0 8px;">
+  <img src="./paypal.png" alt="PayPal" style="height:30px; margin:0 8px;">
+  <img src="./applepay.png" alt="Apple Pay" style="height:30px; margin:0 8px;">
+  <p style="font-size:0.8rem; color:#aaa; margin-top:10px;">
+    Transactions are encrypted & secured with SSL
+  </p>
+</div>
+
+  <p style="margin-top:20px; font-size:0.9rem; color:#888;">&copy; 2025 NoirBleed. All rights reserved.</p>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  const body = document.body;
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (body.classList.contains('sidebar-open')) {
+      sidebar.style.right = '-200px';
+      body.classList.remove('sidebar-open');
+    } else {
+      sidebar.style.right = '0px';
+      body.classList.add('sidebar-open');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+      sidebar.style.right = '-200px';
+      body.classList.remove('sidebar-open');
+    }
+  });
+</script>
+
+</body>
+</html>
