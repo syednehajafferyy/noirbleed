@@ -353,11 +353,21 @@ function removeFromCart(id) {
   const products = [
     { id: 1, name: "Black Graphic Tee", price: "$29.99", description: "Premium cotton tee with bold NoirBleed print.", image: "./blackgraphictee.jpg" },
     { id: 2, name: "White Dust Hoodie", price: "$49.99", description: "Soft hoodie with minimal dust fade design.", image: "./whihoodie.jpg" },
-    { id: 3, name: "Crop Hoodie", price: "$39.99", description: "Edgy cropped hoodie for streetwear vibes.", image: "./crophod.jpg" },
+    { id: 3, name: "Crop Hoodie", price: "$39.99", description: "Edgy cropped hoodie for streetwear vibes.", image:"./crophod.jpg" },
     { id: 4, name: "Oversized Hoodie", price: "$54.99", description: "Relaxed fit hoodie for ultimate comfort.", image: "./oversized.jpg" },
     { id: 5, name: "Streetwear Tee", price: "$34.99", description: "Urban style tee with unique NoirBleed graphics.", image: "./streetwear.jpg" },
-    { id: 6, name: "Limited Edition Hoodie", price: "$59.99", description: "Exclusive hoodie with limited run print.", image: "./limitesed.jpg" }
+    { id: 6, name: "Bleed Hoodie", price: "$55", description: "Exclusive hoodie with limited run print.", image: "./noirhood.jpg" },
+    { id: 7, name: "Classic T-Shirt", price: "$25", description: "Essential Classic.", image: "./kk.jpg" },
+    { id: 8, name: "Graphic T-Shirt", price: "$29.99", description: "Stylish graphic tee with unique design.", image: "./nn.jpg" },
+    { id: 9, name: "Limited T-Shirt", price: "$27.50", description: "Limited edition tee with exclusive print.", image: "./desg.jpg" },
+    { id: 10, name: "Limited T-Shirt", price: "$27.50", description: "Limited edition tee with exclusive print.", image: "./ll.jpg" },
+    { id: 11, name: "Dazed Crop Hoodie", price: "$44.99", description: "Winter Hoodie", image: "./crophod.jpg" },
+    { id: 12, name: "Minimalist Crop Hoodie", price: "$47.99", description: "Minimalist design for a sleek look.", image: "./purplegraph.jpg" },
+    { id: 13, name: "Retro Crop Hoodie", price: "$49.99", description: "Retro Graphic Design.", image: "./retro.jpg" },
+
   ];
+
+
 
   const params = new URLSearchParams(window.location.search);
   const productId = parseInt(params.get('id'));
